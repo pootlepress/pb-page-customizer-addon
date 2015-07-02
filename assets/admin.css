@@ -1,0 +1,13 @@
+/**
+ * Plugin front end styles
+ *
+ * @package PPB_Page_Customizer_Addon
+ * @version 0.1.0
+ */
+
+#pootlepb-panels h3 button.page-settings,
+#pootlepb-panels h3 button.hide-elements {
+    float: right;
+    margin-top: 0;
+    margin-left: 3px;
+}

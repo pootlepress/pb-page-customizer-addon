@@ -111,13 +111,12 @@ class PPB_Page_Customizer_Addon{
 		<input type="hidden" id="page-settings" name="page-settings" value="<?php esc_attr_e( $pageSettings ) ?>"/>
 		<input type="hidden" id="hide-elements" name="hide-elements" value="<?php esc_attr_e( $hideElements ) ?>"/>
 
-		<div class="ppb-hidden-editor-container" style="display:none;">
+		<div id="hide-element-dialog" data-title="<?php esc_attr_e( 'Hide Elements', 'ppb-panels' ) ?>" class="panels-admin-dialog">
 			<?php
-			$request = null;
-			require POOTLEPB_DIR . 'tpl/content-block-panel.php';
+			$hideElementsFields = ppb_pc_hide_elements_fields();
+			pootlepb_hide_elements_dialog_echo( $hideElementsFields );
 			?>
 		</div>
-
 		<div id="page-setting-dialog" data-title="<?php esc_attr_e( 'Page Settings', 'ppb-panels' ) ?>"
 		     class="panels-admin-dialog">
 			<?php
